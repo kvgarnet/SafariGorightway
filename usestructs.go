@@ -33,7 +33,7 @@ func (p Person) String() string {
 //	return p
 //}
 
-func (p /***/ Person) increaseCredit(amount int) {
+func (p *Person) increaseCredit(amount int) {
 	// not &p, this time (that would be the address of the POINTER)
 	fmt.Printf("parameter p is at: %p\n", p)
 	// Go uses & to extract a pointer, but does not require (or use) -> to indirect a pointer
@@ -46,7 +46,7 @@ type Business struct {
 	MaxCredit int
 }
 
-func (b /***/ Business) increaseCredit(amount int) {
+func (b *Business) increaseCredit(amount int) {
 	b.MaxCredit += amount
 }
 
@@ -90,7 +90,15 @@ func main() {
 	fmt.Println(clarkKent.Person.Name)
 	fmt.Println(clarkKent.Name)
 
-	var creds []Creditable = []Creditable{ayo, clarkKent, Business{"SuperACME", 10000}}
+	// Problem #1 (which I think someone was trying to tell me in the chat and
+	// I failed to interpret correctly.
+	// The interface does not get declared with any indication that a pointer
+	// is used, but because the methods that satisfy the interface take pointers,
+	// so a pointer is needed to satisfy that interface
+	// therefore, the only change made here (aside from putting the pointer asterisks
+	// back into the method declarations, is the addition of these three ampersands
+	//                                    v     v           v
+	var creds []Creditable = []Creditable{&ayo, &clarkKent, &Business{"SuperACME", 10000}}
 	fmt.Println(creds)
 	for _, v := range creds {
 		v.increaseCredit(10)

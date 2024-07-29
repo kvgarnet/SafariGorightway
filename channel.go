@@ -19,6 +19,12 @@ func consumer(in chan int, control chan bool) {
 		fmt.Println("value is ", v)
 	}
 	fmt.Println("consumer shutting down")
+	// PROBLEM #2
+	// I did not send the message to the control channel to tell the
+	// main process that we're done!!! The following does that...
+	// again, I think someone tried to tell me that, but I didn't
+	// understand the help.
+	control <- true
 }
 
 func main() {
