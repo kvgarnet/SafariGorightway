@@ -1,0 +1,21 @@
+Contact Info
+------------
+
+Email me at: simon@dancingcloudservices.com
+Join me on LinkedIn: https://www.linkedin.com/in/simonhgroberts/
+Subscribe to my YouTube channel: https://www.youtube.com/@DancingCloudServices
+
+NOTE: the git repo will vanish in two weeks, clone/download before then!
+
+Contact me directly at simon@dancingcloudservices.com if your 
+organization might be interested in customized training or course
+development. I work in Java, Scala, JavaScript, Python, Go, and
+address OO design, functional design, and software architecture 
+topics, and am happy to deliver training either onsite or web-based,
+or to build courses and training material in video or other formats.
+
+Sign up for Heinz Kabutz's monthly "favorite courses on O'Reilly" email:
+  https://javaspecialists.eu/courses/oreilly/
+(If you're into Java, you might want to join his "Java Specialists" email
+newsletter too!)
+
