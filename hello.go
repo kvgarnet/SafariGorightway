@@ -8,10 +8,17 @@ var anotherMessage = "More text"
 
 const (
 	//joker = 99
-	hearts   int = 1 << iota
-	diamonds     = 1 << iota
-	clubs        = 1 << iota
-	spades       = 1 << iota
+	hearts int = 1 << iota
+	diamonds
+	clubs
+	spades
+)
+
+const (
+	zero = iota
+	one
+	two = iota * 2
+	three
 )
 
 // m2 := "xxx" // local variables only
@@ -28,4 +35,8 @@ func main() {
 	// are handled by the compiler to "very high" range & precision
 	var num int8 = 12345678901234567890 / 10000000000000000000
 	fmt.Println(num)
+
+	var x1 int8 = 99
+	var x2 int16 = int16(x1)
+	fmt.Println(x2)
 }
