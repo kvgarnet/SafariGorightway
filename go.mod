@@ -1,3 +1,3 @@
-module SafariGo
+module SafariGorightway
 
-go 1.22
+go 1.21

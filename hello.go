@@ -1,6 +1,6 @@
 package main
 
-import "SafariGo/util"
+import "SafariGorightway/util"
 import "fmt"
 
 // var anotherMessage string = "More text"
